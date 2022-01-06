@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="scenebuilder-17.0.0-all">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../java-libs/java-graphics/app/scenebuilder-17.0.0-all.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
