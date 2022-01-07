@@ -17,8 +17,6 @@ j
 :src/main/java/common/workshopjavafxjdbc/dao/SellerDao.java,0\8\08ec1d75f8acc44a55077ee0338f2042671c7c83
 s
 Csrc/main/java/common/workshopjavafxjdbc/dao/impl/SellerDaoJDBC.java,8\6\86425497eb2a5c23e13254c20f5c4535ffdecd80
-k
-;src/main/java/common/workshopjavafxjdbc/gui/util/Utils.java,a\a\aae7401efc578f5523472584efc867fc30f5d1f7
 w
 Gsrc/main/java/common/workshopjavafxjdbc/dao/impl/DepartmentDaoJDBC.java,7\4\74338ff55f946829761638e9cf41833ade1b43cb
 x
@@ -30,8 +28,6 @@ Esrc/main/java/common/workshopjavafxjdbc/DepartmentFormController.java,2\b\2b1c
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-v
-Fsrc/main/java/common/workshopjavafxjdbc/model/entities/Department.java,e\b\eb12e7884c2241a64e9b5a3e4bcaefc1e76eb82f
 €
 Psrc/main/java/common/workshopjavafxjdbc/model/exeptions/ValidationException.java,c\2\c2f09a7cd1d60085bdef6cf172999e52b634c522
 =
