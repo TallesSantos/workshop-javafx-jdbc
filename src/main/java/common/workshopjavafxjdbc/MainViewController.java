@@ -1,4 +1,5 @@
 package common.workshopjavafxjdbc;
+
 import common.workshopjavafxjdbc.gui.util.Alerts;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,36 +26,33 @@ public class MainViewController implements Initializable {
     private MenuItem menuItemAbout;
 
     @FXML
-    public void onMenuItemSellerAction(){
+    public void onMenuItemSellerAction() {
         System.out.println("onMenuItemSellerAction");
     }
 
     @FXML
-    public void onMenuItemDepartmentAction(){
+    public void onMenuItemDepartmentAction() {
         System.out.println("onMenuItemDepartment");
 
         loadView("DepartmentList.fxml", (DepartmentListController controller) -> {
             controller.setDepartmentService(new DepartmentService());
-            try {
-                controller.updateTableView();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
+            controller.updateTableView();
         });
     }
 
     @FXML
-    public void onMenuItemAboutAction(){
+    public void onMenuItemAboutAction() {
         System.out.println("onMenuItemAbout");
 
-        loadView("AboutView.fxml", (x) -> {});
+        loadView("AboutView.fxml", (x) -> {
+        });
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }
 
-    private <T>void loadView(String absoluteName, Consumer<T> initializingAction){
+    private <T> void loadView(String absoluteName, Consumer<T> initializingAction) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
             VBox newVbox = loader.load();
@@ -69,8 +67,7 @@ public class MainViewController implements Initializable {
 
             T controller = loader.getController();
             initializingAction.accept(controller);
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), Alert.AlertType.ERROR);
         }
     }

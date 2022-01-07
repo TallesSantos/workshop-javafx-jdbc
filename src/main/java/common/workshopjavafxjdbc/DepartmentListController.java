@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
 
 public class DepartmentListController implements Initializable {
 
-    private DepartmentService service;
+    protected DepartmentService service;
 
     private ObservableList<Department> obsList;
 
@@ -69,9 +69,9 @@ public class DepartmentListController implements Initializable {
         creatingDialogForm(obj, "DepartmentForm.fxml", parentStage);
     }
 
-    public void updateTableView() throws IllegalAccessException {
+    public void updateTableView() {
         if (service == null) {
-            throw new IllegalAccessException("Service was null");
+            throw new IllegalStateException("Service was null");
         }
         List<Department> list = service.findAll();
         obsList = FXCollections.observableList(list);
@@ -85,6 +85,7 @@ public class DepartmentListController implements Initializable {
 
             DepartmentFormController controller = loader.getController();
             controller.setDepartment(obj);
+            controller.setDepartmentService(new DepartmentService());
             controller.updateFormData();
 
             Stage dialogueStage = new Stage();
