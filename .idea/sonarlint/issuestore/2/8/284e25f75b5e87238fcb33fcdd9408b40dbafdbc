@@ -1,0 +1,6 @@
+
+\
+java:S1118
+":Add a private constructor to hide the implicit public one.(Ë±Íıÿÿÿÿ8ßû¥ã/
+{
+java:S1171'"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8úõÌ°ã/

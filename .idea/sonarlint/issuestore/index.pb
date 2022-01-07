@@ -22,3 +22,17 @@ l
 Psrc/main/java/common/workshopjavafxjdbc/model/exeptions/ValidationException.java,c\2\c2f09a7cd1d60085bdef6cf172999e52b634c522
 =
 db.properties,3\b\3b8c33088fa60dfa967fdedbf4c75fa52fdece9a
+N
+src/main/java/module-info.java,1\c\1c89a5491fbfda3fb050196d6a239f20200296e7
+}
+Msrc/main/java/common/workshopjavafxjdbc/model/services/DepartmentService.java,8\2\82b7869ae3caabab08ed470e87927181a67bca5c
+r
+Bsrc/main/java/common/workshopjavafxjdbc/model/entities/Seller.java,5\2\52e121edbe175f5a804359aac10300950b7db946
+v
+Fsrc/main/java/common/workshopjavafxjdbc/model/entities/Department.java,e\b\eb12e7884c2241a64e9b5a3e4bcaefc1e76eb82f
+o
+?src/main/java/common/workshopjavafxjdbc/MainViewController.java,e\f\ef7bd37fb2be2da683ad5914b2f69de5c0e0455b
+j
+:src/main/java/common/workshopjavafxjdbc/dao/SellerDao.java,0\8\08ec1d75f8acc44a55077ee0338f2042671c7c83
+q
+Asrc/main/java/common/workshopjavafxjdbc/gui/util/Constraints.java,2\8\284e25f75b5e87238fcb33fcdd9408b40dbafdbc
