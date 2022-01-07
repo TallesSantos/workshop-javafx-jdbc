@@ -1,4 +1,4 @@
-package common.model.entities;
+package common.workshopjavafxjdbc;
 
 import java.io.Serializable;
 
