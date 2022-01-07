@@ -9,12 +9,11 @@ import common.workshopjavafxjdbc.model.services.SellerService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.*;
 
 public class SellerFormController implements Initializable {
@@ -32,7 +31,27 @@ public class SellerFormController implements Initializable {
     private TextField txtName;
 
     @FXML
+    private TextField txtEmail;
+
+    @FXML
+    private DatePicker txtBirthDate;
+
+    @FXML
+    private TextField txtBaseSalary;
+
+
+    @FXML
     private Label labelErrorName;
+
+    @FXML
+    private Label labelErrorEmail;
+
+    @FXML
+    private Label labelErrorBirthDate;
+
+    @FXML
+    private Label labelErrorBaseSalary;
+
 
     @FXML
     private Button btSave;
@@ -48,7 +67,7 @@ public class SellerFormController implements Initializable {
         this.service = SellerService;
     }
 
-    public void subcribeDateChangeListener(DataChangeListener listener){
+    public void subcribeDateChangeListener(DataChangeListener listener) {
         dataChangeListeners.add(listener);
     }
 
@@ -67,16 +86,15 @@ public class SellerFormController implements Initializable {
             service.saveOrUpdate(entity);
             notifyDataChangeListener();
             Utils.currentStage(event).close();
-        }catch (ValidationException e){
+        } catch (ValidationException e) {
             setErrorMessages(e.getErrors());
-        }
-        catch (db.DbException e) {
+        } catch (db.DbException e) {
             Alerts.showAlert("Error saving object", null, e.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
     private void notifyDataChangeListener() {
-        for(DataChangeListener listener: dataChangeListeners){
+        for (DataChangeListener listener : dataChangeListeners) {
             listener.onDataChanged();
         }
     }
@@ -88,13 +106,13 @@ public class SellerFormController implements Initializable {
 
         obj.setId(Utils.tryParseToInt(txtId.getText()));
 
-        if(txtName.getText() == null || txtName.getText().trim().equals("")){
+        if (txtName.getText() == null || txtName.getText().trim().equals("")) {
             exception.addError("name", "Field can't be empty");
         }
         obj.setName(txtName.getText());
 
-        if(exception.getErrors().size() > 0){
-            throw  exception;
+        if (exception.getErrors().size() > 0) {
+            throw exception;
         }
         return obj;
     }
@@ -112,7 +130,10 @@ public class SellerFormController implements Initializable {
 
     private void initializeNodes() {
         gui.util.Constraints.setTextFieldInteger(txtId);
-        gui.util.Constraints.setTextFieldMaxLength(txtName, 30);
+        gui.util.Constraints.setTextFieldMaxLength(txtName, 70);
+        gui.util.Constraints.setTextFieldMaxLength(txtEmail, 60);
+        gui.util.Constraints.setTextFieldDouble(txtBaseSalary);
+        gui.util.Constraints.formatDatePicker(txtBirthDate, "dd/MM/yyyy");
     }
 
     public void updateFormData() {
@@ -122,12 +143,19 @@ public class SellerFormController implements Initializable {
         }
 
         txtId.setText(String.valueOf(entity.getId()));
-        txtId.setText(entity.getName());
+        txtName.setText(entity.getName());
+        txtEmail.setText(entity.getEmail());
+        Locale.setDefault(Locale.US);
+        txtBaseSalary.setText(String.format("%.2f", entity.getBaseSalary()));
+
+        if (entity.getBirthDate() != null) {
+            txtBirthDate.setValue(LocalDate.ofInstant(entity.getBirthDate().toInstant(), ZoneId.systemDefault()));
+        }
     }
 
-    private void setErrorMessages(Map<String, String> errors){
+    private void setErrorMessages(Map<String, String> errors) {
         Set<String> fields = errors.keySet();
-        if(fields.contains("name")){
+        if (fields.contains("name")) {
             labelErrorName.setText(errors.get("name"));
         }
     }

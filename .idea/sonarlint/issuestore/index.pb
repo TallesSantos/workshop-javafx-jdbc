@@ -1,8 +1,6 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-q
-Asrc/main/java/common/workshopjavafxjdbc/gui/util/Constraints.java,2\8\284e25f75b5e87238fcb33fcdd9408b40dbafdbc
 k
 ;src/main/java/common/workshopjavafxjdbc/db/DbException.java,4\8\485d4dc1bb2b9d4e3ae9f2a202a4dfbe8f6d3abd
 t
@@ -13,12 +11,6 @@ k
 ;src/main/java/common/workshopjavafxjdbc/dao/DaoFactory.java,3\b\3b0185d731d4a67afa738b4827bd9a9dab3cbe0f
 n
 >src/main/java/common/workshopjavafxjdbc/dao/DepartmentDao.java,6\0\60d09415408992cdf3be04ccc07626e622e1cc51
-j
-:src/main/java/common/workshopjavafxjdbc/dao/SellerDao.java,0\8\08ec1d75f8acc44a55077ee0338f2042671c7c83
-s
-Csrc/main/java/common/workshopjavafxjdbc/dao/impl/SellerDaoJDBC.java,8\6\86425497eb2a5c23e13254c20f5c4535ffdecd80
-w
-Gsrc/main/java/common/workshopjavafxjdbc/dao/impl/DepartmentDaoJDBC.java,7\4\74338ff55f946829761638e9cf41833ade1b43cb
 x
 Hsrc/main/java/common/workshopjavafxjdbc/gui/util/DataChangeListener.java,e\1\e1b88acaee4539fcc0cbe81c6af98d7c9a4f2463
 l
