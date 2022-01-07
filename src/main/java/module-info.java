@@ -4,6 +4,7 @@ module common.workshopjavafxjdbc {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
+    requires java.sql;
 
     opens common.workshopjavafxjdbc to javafx.fxml;
     exports common.workshopjavafxjdbc;
