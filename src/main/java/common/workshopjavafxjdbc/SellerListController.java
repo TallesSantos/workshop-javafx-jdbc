@@ -100,32 +100,31 @@ public class SellerListController implements Initializable, DataChangeListener {
         List<Seller> list = service.findAll();
         obsList = FXCollections.observableList(list);
         tableViewSeller.setItems(obsList);
-        //initEditButtons();
-        //initRemoveButtons();
+        initEditButtons();
+        initRemoveButtons();
     }
 
     private void createDialogForm(Seller obj, String absoluteName, Stage parentStage) {
-//        try {
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
-//            Pane pane = loader.load();
-//
-//            SellerFormController controller = loader.getController();
-//            controller.setS(obj);
-//            controller.setSellerService(new SellerService());
-//            controller.subcribeDateChangeListener(this);
-//            controller.updateFormData();
-//
-//            Stage dialogueStage = new Stage();
-//            dialogueStage.setTitle("Enter Seller data");
-//            dialogueStage.setScene(new Scene(pane));
-//            dialogueStage.setResizable(false);
-//            dialogueStage.initOwner(parentStage);
-//            dialogueStage.initModality(Modality.WINDOW_MODAL);
-//            dialogueStage.showAndWait();
-//
-//        } catch (IOException e) {
-//            Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), Alert.AlertType.ERROR);
-//        }
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
+            Pane pane = loader.load();
+
+            SellerFormController controller = loader.getController();
+            controller.setSeller(obj);
+            controller.setSellerService(new SellerService());
+            controller.subcribeDateChangeListener(this);
+            controller.updateFormData();
+
+            Stage dialogueStage = new Stage();
+            dialogueStage.setTitle("Enter Seller data");
+            dialogueStage.setScene(new Scene(pane));
+            dialogueStage.setResizable(false);
+            dialogueStage.initOwner(parentStage);
+            dialogueStage.initModality(Modality.WINDOW_MODAL);
+            dialogueStage.showAndWait();
+        } catch (IOException e) {
+            Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), Alert.AlertType.ERROR);
+        }
     }
 
     @Override
@@ -182,7 +181,7 @@ public class SellerListController implements Initializable, DataChangeListener {
             try {
                 service.remove(obj);
                 updateTableView();
-            }catch (db.DbIntegrityException e){
+            } catch (db.DbIntegrityException e) {
                 Alerts.showAlert("Error removing object", null, e.getMessage(), Alert.AlertType.ERROR);
             }
         }

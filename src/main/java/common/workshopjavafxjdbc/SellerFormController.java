@@ -118,7 +118,7 @@ public class SellerFormController implements Initializable {
     public void updateFormData() {
 
         if (entity == null) {
-            throw new IllegalStateException("entyti was null");
+            throw new IllegalStateException("entity was null");
         }
 
         txtId.setText(String.valueOf(entity.getId()));

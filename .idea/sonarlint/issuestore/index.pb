@@ -23,8 +23,6 @@ x
 Hsrc/main/java/common/workshopjavafxjdbc/gui/util/DataChangeListener.java,e\1\e1b88acaee4539fcc0cbe81c6af98d7c9a4f2463
 l
 <src/main/java/common/workshopjavafxjdbc/gui/util/Alerts.java,c\3\c3280b8464d643f159b5141e24b7f1f2ac04f759
-u
-Esrc/main/java/common/workshopjavafxjdbc/DepartmentFormController.java,2\b\2b1c48a4e87e11c4accb478e33575b6cfa9950f3
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
