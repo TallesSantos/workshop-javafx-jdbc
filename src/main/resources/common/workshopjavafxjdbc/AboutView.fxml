@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="104.0" prefWidth="193.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="labelAbout" text="About">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="20.0" top="10.0" />
+         </padding></Label>
+      <Label fx:id="labelAbout2" prefHeight="17.0" prefWidth="144.0" text="javaAplicationLabel">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+   </children>
+</VBox>
