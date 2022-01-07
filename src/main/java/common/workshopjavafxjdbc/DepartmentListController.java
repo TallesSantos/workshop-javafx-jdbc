@@ -1,6 +1,7 @@
 package common.workshopjavafxjdbc;
 
 import common.workshopjavafxjdbc.gui.util.Alerts;
+import common.workshopjavafxjdbc.gui.util.DataChangeListener;
 import common.workshopjavafxjdbc.gui.util.Utils;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,7 +24,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class DepartmentListController implements Initializable {
+public class DepartmentListController implements Initializable, DataChangeListener {
 
     protected DepartmentService service;
 
@@ -86,6 +87,7 @@ public class DepartmentListController implements Initializable {
             DepartmentFormController controller = loader.getController();
             controller.setDepartment(obj);
             controller.setDepartmentService(new DepartmentService());
+            controller.subcribeDateChangeListener(this);
             controller.updateFormData();
 
             Stage dialogueStage = new Stage();
@@ -101,5 +103,8 @@ public class DepartmentListController implements Initializable {
         }
     }
 
-
+    @Override
+    public void onDataChanged() {
+        updateTableView();
+    }
 }
