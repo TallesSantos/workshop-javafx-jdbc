@@ -7,4 +7,5 @@ module common.workshopjavafxjdbc {
 
     opens common.workshopjavafxjdbc to javafx.fxml;
     exports common.workshopjavafxjdbc;
+
 }

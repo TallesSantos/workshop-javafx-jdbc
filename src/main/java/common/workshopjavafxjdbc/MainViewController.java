@@ -1,4 +1,5 @@
 package common.workshopjavafxjdbc;
+import common.workshopjavafxjdbc.Main;
 import common.workshopjavafxjdbc.gui.util.Alerts;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
