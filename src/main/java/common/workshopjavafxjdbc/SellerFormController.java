@@ -3,9 +3,9 @@ package common.workshopjavafxjdbc;
 import common.workshopjavafxjdbc.gui.util.Alerts;
 import common.workshopjavafxjdbc.gui.util.DataChangeListener;
 import common.workshopjavafxjdbc.gui.util.Utils;
-import common.workshopjavafxjdbc.model.entities.Department;
+import common.workshopjavafxjdbc.model.entities.Seller;
 import common.workshopjavafxjdbc.model.exeptions.ValidationException;
-import common.workshopjavafxjdbc.model.services.DepartmentService;
+import common.workshopjavafxjdbc.model.services.SellerService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,11 +17,11 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.*;
 
-public class DepartmentFormController implements Initializable {
+public class SellerFormController implements Initializable {
 
-    private Department entity;
+    private Seller entity;
 
-    private DepartmentService service;
+    private SellerService service;
 
     private List<DataChangeListener> dataChangeListeners = new ArrayList<>();
 
@@ -40,12 +40,12 @@ public class DepartmentFormController implements Initializable {
     @FXML
     private Button btCancel;
 
-    public void setDepartment(Department entity) {
+    public void setSeller(Seller entity) {
         this.entity = entity;
     }
 
-    public void setDepartmentService(DepartmentService departmentService) {
-        this.service = departmentService;
+    public void setSellerService(SellerService SellerService) {
+        this.service = SellerService;
     }
 
     public void subcribeDateChangeListener(DataChangeListener listener){
@@ -81,8 +81,8 @@ public class DepartmentFormController implements Initializable {
         }
     }
 
-    private Department getFormData() {
-        Department obj = new Department();
+    private Seller getFormData() {
+        Seller obj = new Seller();
 
         ValidationException exception = new ValidationException("Validation Error");
 

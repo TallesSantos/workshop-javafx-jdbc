@@ -1,7 +1,8 @@
-package common.workshopjavafxjdbc;
+package common.workshopjavafxjdbc.model.services;
 
 import common.workshopjavafxjdbc.dao.DaoFactory;
 import common.workshopjavafxjdbc.dao.DepartmentDao;
+import common.workshopjavafxjdbc.model.entities.Department;
 
 import java.util.List;
 

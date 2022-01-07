@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import common.workshopjavafxjdbc.Department;
-import common.workshopjavafxjdbc.Seller;
+import common.workshopjavafxjdbc.model.entities.Department;
+import common.workshopjavafxjdbc.model.entities.Seller;
 import common.workshopjavafxjdbc.dao.SellerDao;
 import common.workshopjavafxjdbc.db.DB;
 import db.DbException;

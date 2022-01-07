@@ -1,4 +1,4 @@
-package common.workshopjavafxjdbc;
+package common.workshopjavafxjdbc.model.exeptions;
 
 import java.util.HashMap;
 import java.util.Map;

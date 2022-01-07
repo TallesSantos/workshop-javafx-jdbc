@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import common.workshopjavafxjdbc.Department;
+import common.workshopjavafxjdbc.model.entities.Department;
 import common.workshopjavafxjdbc.dao.DepartmentDao;
 import common.workshopjavafxjdbc.db.DB;
 import db.DbException;
