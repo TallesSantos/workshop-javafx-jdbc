@@ -1,0 +1,11 @@
+
+ƒ
+java:S1192l"hDefine a constant instead of duplicating this literal "ON seller.DepartmentId = department.Id " 3 times.(İíÏíùÿÿÿÿ
+‚
+java:S1192j"lDefine a constant instead of duplicating this literal "SELECT seller.*,department.Name as DepName " 3 times.(À¨ïı
+y
+java:S1192k"cDefine a constant instead of duplicating this literal "FROM seller INNER JOIN department " 3 times.(õ³›ç
+d
+java:S1192"MDefine a constant instead of duplicating this literal "DepartmentId" 5 times.(ÇÖóÑ
+v
+java:S1488s"[Immediately return this expression instead of assigning it to the temporary variable "obj".(–î©Áøÿÿÿÿ
