@@ -1,4 +1,10 @@
-<h1> Application with interface and database connection </h1>
+<h1 align="center"> Application with interface and database connection </h1>
+
+<p align="center" >
+        <a href="https://skillicons.dev">
+          <img src="https://skillicons.dev/icons?i=git,java,mysql" />
+        </a>
+</p>
 
 <h4>Home screen with access menu to other application tabs</h4>
 
@@ -102,11 +108,6 @@ JAVA_HOME
 <td>Java-fx-sdk</td>
 <td>17.0.1</td>
 </tr>
-
-<tr> 
-<td></td>
-</tr>
-
 
 <table>
 
