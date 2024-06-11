@@ -80,6 +80,7 @@ JAVA_HOME
 </ul>
 
 
+<!--
 <h2>Used technologies</h2> 
 
 <table> 
@@ -109,7 +110,7 @@ JAVA_HOME
 <td>17.0.1</td>
 </tr>
 
-<table>
+<table> --> 
 
 
 
